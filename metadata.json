@@ -1,0 +1,6 @@
+{
+  "name": "Domínio das Línguas | DDL",
+  "description": "Acesso especial e oportunidade de entrada no projeto Domínio das Línguas. Expansão, autonomia e visão internacional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

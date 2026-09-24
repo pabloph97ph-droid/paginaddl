@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
-import { PLANS } from '../config/pricing';
+import { PLANS, VALID_COUPONS } from '../config/pricing';
 import { PlanType } from '../types';
 
 interface FinalCtaProps {
@@ -100,7 +100,10 @@ export const FinalCta: React.FC<FinalCtaProps> = ({
           {isApplied && (
             <p className="mt-2 text-xs text-emerald-400 flex items-center gap-1.5 text-left">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Condição especial ativa ({activeCoupon})</span>
+              <span>
+                Condição especial ativa ({activeCoupon})
+                {VALID_COUPONS[activeCoupon]?.label ? ` — ${VALID_COUPONS[activeCoupon].label}` : ''}
+              </span>
             </p>
           )}
 

@@ -122,10 +122,15 @@ export const Footer: React.FC = () => {
                   <Mail className="w-3.5 h-3.5 text-[#c5a880]" />
                   <span>{INTEGRATION_CONFIG.contactEmail}</span>
                 </div>
-                <div className="flex items-center gap-2 text-white">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white hover:text-emerald-400 transition-colors"
+                >
                   <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Atendimento direto via WhatsApp da coordenação</span>
-                </div>
+                  <span>Atendimento direto via WhatsApp: (11) 91496-6246</span>
+                </a>
               </div>
             )}
 

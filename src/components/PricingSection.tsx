@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Tag, Check, Sparkles, ArrowRight, ShieldCheck, Info } from 'lucide-react';
-import { PLANS } from '../config/pricing';
+import { PLANS, VALID_COUPONS } from '../config/pricing';
 import { PlanType } from '../types';
 
 interface PricingSectionProps {
@@ -73,7 +73,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
               }`}
             >
               <Sparkles className="w-4 h-4 text-emerald-400" />
-              <span>Condição especial ativada com o código: <strong className="tracking-wider">{activeCoupon}</strong></span>
+              <span>
+                Condição especial ativada com o código: <strong className="tracking-wider">{activeCoupon}</strong>
+                {VALID_COUPONS[activeCoupon]?.label ? ` (${VALID_COUPONS[activeCoupon].label})` : ''}
+              </span>
             </div>
           )}
 
